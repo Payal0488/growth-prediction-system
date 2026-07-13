@@ -225,16 +225,35 @@ const Register = () => {
               Create Account
             </button>
 
+            {/* Divider */}
+
+            <div className="flex items-center mt-4">
+
+              <hr className="flex-1" />
+
+              <span className="mx-3 text-gray-400">OR</span>
+
+              <hr className="flex-1" />
+
+            </div>
+
+            {/* Google Sign-in */}
+
+            <button
+              type="button"
+              onClick={() => (window.location.href = "/auth/google")}
+              className="w-full border border-[#E5DDD3] py-3 rounded-xl hover:bg-[#F7F3EE] mt-4"
+            >
+              Continue with Google
+            </button>
+
             {/* Login */}
 
             <p className="text-center text-gray-600">
 
               Already have an account?
 
-              <Link
-                to="/login"
-                className="ml-2 text-[#A3B18A] font-semibold"
-              >
+              <Link to="/login" className="ml-2 text-[#A3B18A] font-semibold">
                 Login
               </Link>
 

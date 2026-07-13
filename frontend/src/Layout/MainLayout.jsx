@@ -4,7 +4,7 @@ import Sidebar from "../Components/Sidebar";
 
 const MainLayout = () => {
   return (
-    <div className="flex min-h-screen bg-[#F7F3EE] text-[#2F3A32]">
+    <div className="flex min-h-screen bg-[#F7F3EE] text-[#2F3A32] dark:bg-[#1F2937] dark:text-[#F9FAFB]">
       <Sidebar />
       <div className="flex-1">
         <Navbar />

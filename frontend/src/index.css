@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap");
 @custom-variant dark (&:where(.dark, .dark *));
 @import "tailwindcss";
 
@@ -12,6 +12,32 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Design tokens - light theme */
+:root {
+  --bg: #faf7f0;
+  --card: #ffffff;
+  --border: #e7e1d8;
+  --dark: #30452f;
+  --green: #718a57;
+  --olive: #566f42;
+  --gold: #c58a4a;
+  --text: #2f332f;
+  --muted: #6d746c;
+}
+
+/* Dark theme tokens */
+html.dark :root {
+  --bg: #0b1220;
+  --card: #0f1724;
+  --border: #374151;
+  --dark: #d1e7cc;
+  --green: #94b386;
+  --olive: #8aa07a;
+  --gold: #c58a4a;
+  --text: #f9fafb;
+  --muted: #cbd5d1;
 }
 
 * {
@@ -37,6 +63,30 @@ html.dark body {
 
 #root {
   min-height: 100vh;
+}
+
+html.dark [class~="bg-[#F7F3EE]"] {
+  background-color: #1f2937 !important;
+}
+
+html.dark [class~="bg-[#FFFDF9]"] {
+  background-color: #111827 !important;
+}
+
+html.dark [class~="bg-[#D9E5D6]"] {
+  background-color: #1f2937 !important;
+}
+
+html.dark [class~="border-[#E5DDD3]"] {
+  border-color: #4b5563 !important;
+}
+
+html.dark [class~="text-[#2F3A32]"] {
+  color: #f9fafb !important;
+}
+
+html.dark [class*="text-[#2F3A32]/70"] {
+  color: rgba(249,250,251,0.7) !important;
 }
 
 button,

@@ -61,13 +61,13 @@ const menuItems = [
 
 const Sidebar = () => {
   return (
-    <aside className="w-72 bg-[#FFFDF9] border-r border-[#E5DDD3] min-h-screen p-6">
+    <aside className="w-72 bg-[#FFFDF9] border-r border-[#E5DDD3] min-h-screen p-6 dark:bg-[#111827] dark:border-[#4B5563]">
 
-      <h1 className="text-3xl font-bold text-[#2F3A32] mb-10">
+      <h1 className="text-3xl font-bold text-[#2F3A32] mb-10 dark:text-[#F9FAFB]">
         GrowthPilot
       </h1>
 
-      <nav className="space-y-2">
+      <nav className="space-y-2 dark:text-[#F9FAFB]">
 
         {menuItems.map((item) => (
           <NavLink
@@ -77,8 +77,8 @@ const Sidebar = () => {
               `flex items-center gap-4 p-4 rounded-xl transition
               ${
                 isActive
-                  ? "bg-[#D9E5D6] text-[#2F3A32]"
-                  : "hover:bg-[#F7F3EE]"
+                  ? "bg-[#D9E5D6] text-[#2F3A32] dark:bg-[#374151] dark:text-[#F9FAFB]"
+                  : "hover:bg-[#F7F3EE] dark:hover:bg-[#4B5563] dark:text-[#F9FAFB]"
               }`
             }
           >

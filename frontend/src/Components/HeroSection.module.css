@@ -1,0 +1,143 @@
+.heroSection {
+  position: relative;
+  padding: 2.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  z-index: 1;
+}
+
+.heroTop {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.heroTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1.25rem;
+  border: 1px solid rgba(113, 138, 87, 0.18);
+  border-radius: 999px;
+  background: rgba(113, 138, 87, 0.08);
+  color: var(--dark);
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+}
+
+.tagIcon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.heroCopy {
+  max-width: 780px;
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.heroTitle {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  margin: 0;
+}
+
+.titleLine {
+  display: block;
+}
+
+.dark {
+  color: var(--dark);
+}
+
+.gold {
+  color: var(--gold);
+}
+
+.olive {
+  color: var(--green);
+}
+
+.heroDescription {
+  margin-top: 1.75rem;
+  max-width: 610px;
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--muted);
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  min-height: 3.5rem;
+  padding: 0 2rem;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.primaryButton {
+  background: var(--green);
+  color: white;
+  box-shadow: 0 16px 40px rgba(113, 138, 87, 0.18);
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+}
+
+.secondaryButton {
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.secondaryButton:hover {
+  transform: translateY(-2px);
+}
+
+.buttonIcon {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+@media (max-width: 900px) {
+  .heroSection {
+    padding: 2rem 1.25rem;
+  }
+
+  .heroTitle {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+  }
+}
+
+@media (max-width: 640px) {
+  .heroTitle {
+    font-size: clamp(2.25rem, 10vw, 3.5rem);
+  }
+
+  .heroActions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

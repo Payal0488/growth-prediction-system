@@ -1,0 +1,184 @@
+.navbar {
+  position: sticky;
+  top: 1.5rem;
+  margin: 0 auto;
+  width: min(95%, 1180px);
+  z-index: 50;
+  border-radius: 2rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.08);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  text-decoration: none;
+}
+
+.logoCircle {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1rem;
+  display: grid;
+  place-items: center;
+  background: rgba(113, 138, 87, 0.14);
+}
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brandTitle {
+  margin: 0;
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.brandSub {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.navLink {
+  position: relative;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: color 0.25s ease;
+}
+
+.navLink:hover,
+.navLinkActive {
+  color: var(--green);
+}
+
+.navLinkActive::after,
+.navLink:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.6rem;
+  width: 100%;
+  height: 3px;
+  border-radius: 999px;
+  background: var(--green);
+}
+
+.brandActions {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.logoImage {
+  width: 1.4rem;
+  height: 1.4rem;
+  object-fit: cover;
+}
+
+.loginButton,
+.registerButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 1.2rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.loginButton {
+  color: var(--text);
+  background: var(--card);
+  border: 1px solid var(--border);
+}
+
+.loginButton:hover {
+  transform: translateY(-1px);
+  background: var(--bg);
+}
+
+.registerButton {
+  background: var(--green);
+  color: var(--text);
+  border: 1px solid transparent;
+}
+
+.registerButton:hover {
+  transform: translateY(-1px);
+  background: #5f7b4a;
+}
+
+.menuToggle {
+  display: none;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--text);
+  padding: 0.85rem;
+}
+
+.mobileMenu {
+  padding: 1rem 1.5rem 1.5rem;
+  background: var(--card);
+  border-top: 1px solid var(--border);
+}
+
+.mobileLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.mobileLink {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid rgba(231, 225, 216, 0.7);
+}
+
+.mobileActions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+@media (max-width: 900px) {
+  .navLinks {
+    display: none;
+  }
+
+  .menuToggle {
+    display: inline-flex;
+  }
+
+  .brandActions {
+    display: none;
+  }
+}

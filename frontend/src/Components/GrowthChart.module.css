@@ -1,0 +1,74 @@
+.chartContainer {
+  position: relative;
+  width: 100%;
+  min-height: 240px;
+  border-radius: 2rem;
+  padding: 1.5rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.9));
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgba(231, 225, 216, 0.8), 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+.chartGlow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 240px;
+  height: 240px;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, rgba(113, 138, 87, 0.15) 0%, transparent 62%);
+  pointer-events: none;
+}
+
+.chartSvg {
+  position: relative;
+  width: 100%;
+  height: 220px;
+}
+
+.chartLine {
+  fill: none;
+  stroke: url(#chartGradient);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  animation: drawLine 1.6s ease forwards;
+  opacity: 0;
+}
+
+.dotGroup {
+  opacity: 0;
+  animation: revealDots 1s ease forwards;
+}
+
+.dotHalo {
+  fill: rgba(197, 138, 74, 0.18);
+}
+
+.dot {
+  fill: var(--green);
+}
+
+@keyframes drawLine {
+  from {
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+    opacity: 0;
+  }
+  to {
+    stroke-dasharray: 300;
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes revealDots {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
