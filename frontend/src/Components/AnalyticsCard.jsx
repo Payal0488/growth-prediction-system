@@ -1,5 +1,4 @@
 import { ShieldCheck, Sparkles, TrendingUp, TriangleAlert } from "lucide-react";
-import GrowthChart from "./GrowthChart";
 import styles from "./AnalyticsCard.module.css";
 
 const metrics = [
@@ -17,8 +16,6 @@ const AnalyticsCard = () => {
       <p className={styles.description}>
         A premium analytics panel built to highlight trend clarity, model confidence, and strategic outcome guidance for business leaders.
       </p>
-
-      <GrowthChart />
 
       <div className={styles.metricGrid}>
         {metrics.map((metric) => (

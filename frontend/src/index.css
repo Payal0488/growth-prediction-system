@@ -28,7 +28,7 @@
 }
 
 /* Dark theme tokens */
-html.dark :root {
+html.dark {
   --bg: #0b1220;
   --card: #0f1724;
   --border: #374151;

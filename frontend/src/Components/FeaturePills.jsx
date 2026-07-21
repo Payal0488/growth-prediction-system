@@ -2,10 +2,10 @@ import { HeartPulse, Sparkles, TriangleAlert, TrendingUp } from "lucide-react";
 import styles from "./FeaturePills.module.css";
 
 const pills = [
-  { title: "AI Forecasting", icon: <TrendingUp /> },
-  { title: "Business Health", icon: <HeartPulse /> },
-  { title: "Risk Analysis", icon: <TriangleAlert /> },
-  { title: "Smart Recommendations", icon: <Sparkles /> },
+  // { title: "AI Forecasting", icon: <TrendingUp /> },
+  // { title: "Business Health", icon: <HeartPulse /> },
+  // { title: "Risk Analysis", icon: <TriangleAlert /> },
+  // { title: "Smart Recommendations", icon: <Sparkles /> },
 ];
 
 const FeaturePills = () => {
